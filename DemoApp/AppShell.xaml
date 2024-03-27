@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+        x:Class="DemoApp.AppShell"
+        xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        xmlns:local="clr-namespace:DemoApp.CustomControls"
+        xmlns:pages="clr-namespace:DemoApp"
+        xmlns:y="clr-namespace:Maui.BindableProperty.Generator.Core"
+        Shell.FlyoutBehavior="Disabled"
+        Title="DemoApp"
+       >
+
+    <local:CustomTabBar x:Name="MyCustomTabBar"  CenterViewText=""
+                        CenterViewVisible="True"
+                        CenterViewBackgroundColor="Red"
+                        CenterViewCommand="{Binding GoToDetailPageCommand}">
+        <local:CustomTabBar.CenterViewImageSource>
+            <FileImageSource File="profile_pic.svg"></FileImageSource>
+        </local:CustomTabBar.CenterViewImageSource>
+        <Tab Title="Home" Icon="home_icon.svg">
+            <ShellContent
+                Title="Page1"
+                ContentTemplate="{DataTemplate pages:MainPage}"
+                Route="Page1" />
+        </Tab>
+        <Tab Title="Account" Icon="profile_pic.svg">
+            <ShellContent
+                Title="Page2"
+                ContentTemplate="{DataTemplate pages:DetailPage}"
+                Route="Empty" />
+        </Tab>
+        <Tab Title="Tab2" Icon="profile_pic.svg">
+            <ShellContent
+        Title="Page2"
+        ContentTemplate="{DataTemplate pages:DetailPage}"
+        Route="Page2" />
+        </Tab>
+    </local:CustomTabBar>
+
+</Shell>

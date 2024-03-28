@@ -27,7 +27,7 @@
             <ShellContent
                 Title="Page2"
                 ContentTemplate="{DataTemplate pages:DetailPage}"
-                Route="Empty" />
+                Route="Account" />
         </Tab>
         <Tab Title="Tab2" Icon="profile_pic.svg">
             <ShellContent

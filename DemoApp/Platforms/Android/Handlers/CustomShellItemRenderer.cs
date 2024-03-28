@@ -44,7 +44,7 @@ namespace DemoApp.Handlers
                 middleView.Click += async (s, e) =>
                 {
                     Console.WriteLine("middleView clicked");
-                    await Shell.Current.GoToAsync("//Empty");
+                    await Shell.Current.GoToAsync("//Account");
                 };
                 middleView.SetText(tabbar.CenterViewText, TextView.BufferType.Normal);
                 middleView.SetPadding(0, 0, 0, 0);
